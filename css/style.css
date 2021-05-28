@@ -1,0 +1,679 @@
+html,
+body {
+    height: 100%;
+}
+
+.wrapper {}
+
+/*---------------Работа с шапкой и авигационным меню--------------------- */
+.header {
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    margin-top: 60px;
+}
+
+.header:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+
+}
+
+.header__body {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    align-items: center;
+
+}
+
+.header__list {
+    display: flex;
+    position: relative;
+    z-index: 2;
+}
+
+.header__list li {
+    list-style: none;
+    margin: 0px 0px 0px 20px;
+
+}
+
+.header__link {
+    text-decoration: none;
+    font-size: 14px;
+    font-family: "GothamPro-Black";
+}
+
+.header__logo {
+    flex: 0 0 80px;
+    overflow: hidden;
+    position: relative;
+    z-index: 3;
+}
+
+.header__logo img {
+    max-width: 100%;
+}
+
+.header__menu {
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding: 30px 0px 0px 0px;
+
+}
+
+.header__menu.active {
+    top: 0;
+}
+
+/*-------------------------------- Стили для текста*------------------------*/
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "GothamPro-Black";
+}
+
+p {
+    font-family: "GothamPro-Light";
+}
+
+
+a {
+    font-family: "GothamPro-Black";
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+a:hover {
+    font-family: "GothamPro-Black";
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    color: #59BBF2;
+}
+
+/* ------------------------------------------------------*/
+
+
+/* ----------------------БОЛЬШОЕ РАЗРЕШЕНИЕ--------------------------------*/
+
+
+.phone-icon {
+    padding: 20px;
+}
+
+.call__panel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 14px;
+    color: white;
+}
+
+.header__call__panel {
+    display: flex;
+    justify-content: space-around;
+    width: 70%;
+    align-items: center;
+    
+}
+
+.small__button {
+    display: none;
+}
+
+
+
+/* --------------------------Кнопка для больших разрешений-----------------------------------*/
+
+.button_call {
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    border-radius: 56px;
+    background: #FFD155;
+    transition: 0.2s;
+}
+
+.button_call:hover {
+    background: #59BBF2;
+    color: black
+}
+
+.button_call:active {
+    background: #59BBF2;
+    box-shadow: 0 0 #59BBF2 inset;
+}
+
+/*---------------------------------ФОНЫ БОЛЬШОЕ РАЗРЕШЕНИЕ---------------------------------- */
+.background-image {
+    top: 0px;
+    position: absolute;
+    z-index: -1;
+}
+
+.title__page {
+    width: 400px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 200px;
+}
+
+.company__description {
+    width: 509px;
+}
+
+
+.fon-mask,
+.header__video__content {
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -2;
+    width: 1200px;
+}
+
+.fon-mask {
+    z-index: -1;
+}
+
+.video__btn {
+    position: absolute;
+    top: 460px;
+    right: 765px;
+    width: 120px;
+    height: 120px;
+}
+
+
+
+
+
+/* --------------------------РАЗРЕШЕНИЕ 1600px-----------------------------------*/
+@media (max-width:1600px) {
+
+    .fon-mask,
+    .header__video__content {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -2;
+        width: 1100px;
+    }
+
+    .fon-mask {
+        z-index: -1;
+    }
+
+    .video__btn {
+        position: absolute;
+        top: 440px;
+        right: 690px;
+        width: 120px;
+        height: 120px;
+    }
+
+}
+
+/* ------------------------РАЗРЕШЕНИЕ 1400px---------------------------------*/
+
+
+@media (max-width:1400px) {
+
+
+    /*--------------Фоны----------------------------------------------------*/
+    .background-image {
+        top: 50px;
+        position: absolute;
+        z-index: -99;
+        width: 250px;
+    }
+
+    .fon-mask,
+    .header__video__content {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -2;
+        width: 1000px;
+    }
+
+    .fon-mask {
+        z-index: -1;
+    }
+
+    .video__btn {
+        position: absolute;
+        top: 400px;
+        right: 630px;
+        width: 100px;
+        height: 100px;
+    }
+
+
+    /*------------------ЗАГОЛОВОК И КОНТЕНТ-------------------------------*/
+    .title__page {
+        width: 40%;
+        font-size: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 100px;
+    }
+
+    .company__description {
+        width: 40%;
+    }
+
+}
+
+/* ------------------------РАЗРЕШЕНИЕ 1200px---------------------------------*/
+@media (max-width:1200px) {
+
+    .background-image {
+        display: none;
+    }
+
+    .title__page {
+
+        margin-top: 50px;
+    }
+
+    .title__page,
+    .company__description {
+        width: 50%;
+
+    }
+
+    .header__video__content {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -2;
+        width: 115%;
+        opacity: 0.75;
+    }
+
+    .fon-mask {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        width: 1900px;
+        height: 1000px;
+
+    }
+
+    .video__btn {
+        position: absolute;
+        top: 400px;
+        right: 100px;
+        width: 130px;
+        height: 130px;
+    }
+
+}
+
+
+
+
+
+
+/*------------------АДАПТИВ ПОД 993px------------------------------*/
+@media (max-width:993px) {
+
+    .header {
+        margin-top: 0px;
+    }
+
+    .header__logo {
+        width: 100%;
+        flex: 0 0 60px;
+    }
+
+    .header__link {
+        font-size: 10px;
+    }
+
+    .header__call__panel p {
+        font-size: 10px;
+        padding: 5px 0px 0px 0px;
+    }
+
+    .small__button,
+    .fon-mask,
+    .background-image,
+    .phone-icon {
+        /* Прячем: кнопку вызова , маску для видео, оранжевую каплю*/
+        display: none;
+    }
+
+    .button_call {
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        border-radius: 56px;
+        background: #FFD155;
+        transition: 0.2s;
+    }
+
+    .header__video__content {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+        width: 100%;
+        opacity: 0.75;
+    }
+
+    .video__btn {
+        position: absolute;
+        top: 300px;
+        right: 100px;
+        width: 100px;
+        height: 100px;
+    }
+
+
+    /*---------------------Работа с заголовком----------------------------*/
+    .title__page {
+        width: 100%;
+        font-size: 20px;
+        margin-top: 70px;
+    }
+
+    .company__description {
+        width: 70%;
+    }
+
+}
+
+/*------------------------------------------------*/
+
+
+
+
+
+
+/*------------------------ Создание бургегр меню и АДАПТИВ 767px------------------------*/
+.header__burger {
+    display: none; /* Скрытие от разрешений которые выше 767px*/ 
+}
+
+@media (max-width:768px) {
+
+    body.lock {
+        overflow: hidden;
+    }
+
+    .header {
+        margin: 0;
+    }
+
+    .header:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: -1;
+    }
+    .container{
+        width: 90%;
+    }
+
+    .header__body {
+        margin: 3%;
+    }
+
+    .header__logo {
+        flex: 0 0 50px;
+    }
+
+    .header__burger {
+        display: block;
+        position: relative;
+        width: 30px;
+        height: 20px;
+        z-index: 3;
+    }
+
+    .header__burger span {
+        position: absolute;
+        background-color: black;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        top: 9px;
+        transition: all 0.3s;
+
+    }
+
+    .header__burger:before,
+    .header__burger:after {
+        content: '';
+        background-color: black;
+        position: absolute;
+        width: 100%;
+        height: 2px;
+        left: 0;
+        transition: all 0.3s;
+
+    }
+
+    .header__burger:before {
+        top: 0;
+    }
+
+    .header__burger:after {
+        bottom: 0;
+    }
+
+    .header__burger.active span {
+        transform: scale(0);
+
+    }
+
+    .header__burger.active:before {
+        transform: rotate(45deg);
+        top: 9px;
+    }
+
+    .header__burger.active:after {
+        transform: rotate(-45deg);
+        bottom: 9px;
+    }
+
+    .header__menu {
+        position: fixed;
+        top: -110%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all 0.3s;
+        background-color: white;
+
+    }
+
+    .header__menu.active {
+        top: 0;
+    }
+
+    .header__list {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .header__list li {
+        margin: 0px 0px 20px 0px;
+
+    }
+
+
+    .header__link {
+        font-size: 20px;
+        font-family: "GothamPro-Black";
+    }
+
+    a:hover {
+        font-family: "GothamPro-Black";
+        color: black;
+        text-decoration: none;
+        font-size: 16px;
+        color: #59BBF2;
+    }
+
+    /* --------------------------Скрываем панель для маленького разрешения-----------------------------------*/
+    .button_call,.header__call__panel,.call__panel {
+        display: none;
+    }
+    .background-image,.fon-mask {
+        display: none;
+    }
+
+    /* --------------------------Кнопка для маленьких разрешений-----------------------------------*/
+    .small__button {
+        display: flex;
+        margin-top: 20px;
+        padding: .8em 1em calc(.8em + 3px);
+        border-radius: 56px;
+        background: #FFD155;
+        font-family: "GothamPro-Black";
+        border: none;
+        color: black
+    }
+
+    .small__button:hover {
+        background: #59BBF2;
+        color: white;
+    }
+    .title__page,.company__description {
+        width: 100%;
+        margin-top: 10px;
+        font-size: 16px;
+    }
+
+    .header__video__content {
+        position: absolute;
+        margin-top: 500px;
+        width: 100%;
+    }
+
+    .video__btn {
+        position: absolute;
+        top: 600px;
+        width: 80px;
+        height: 80px;
+        z-index: -1;
+    }
+
+}
+
+
+/*------------------РАБОТА С КОНТЕНТНОЙ ЧАСТЬЮ------------------------------*/
+
+
+.content {
+    padding: 200px 0px 0px 0px;
+}
+
+.content__text {
+    line-height: 25px;
+}
+
+
+
+/*--------------------Адаптация контента--------------- */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+@media (max-width:1200px) {
+    .container {
+        max-width: 970px;
+    }
+}
+
+@media (max-width:993px) {
+    .container {
+        max-width: 750px;
+    }
+}
+
+@media (max-width:768px) {
+    .container {
+        max-width: none;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*-------------------------------- Шрифты---------------------------------*/
+
+@font-face {
+    font-family: "GothamPro-Black";
+    src: url("../font/GothamPro-Black.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "GothamPro-Light";
+    src: url(../font/GothamPro-Light.ttf) format("truetype");
+    ;
+    font-style: normal;
+    font-weight: normal;
+}
